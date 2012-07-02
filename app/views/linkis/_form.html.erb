@@ -1,0 +1,29 @@
+<%= form_for(@linki) do |f| %>
+  <% if @linki.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@linki.errors.count, "error") %> prohibited this linki from being saved:</h2>
+
+      <ul>
+      <% @linki.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :techniczne %><br />
+    <%= f.text_field :techniczne %>
+  </div>
+  <div class="field">
+    <%= f.label :adres %><br />
+    <%= f.text_field :adres %>
+  </div>
+  <div class="field">
+    <%= f.label :opis %><br />
+    <%= f.text_area :opis %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

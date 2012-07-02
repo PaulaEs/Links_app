@@ -1,0 +1,27 @@
+<h1>Listing linkis</h1>
+
+<table>
+  <tr>
+    <th>Techniczne</th>
+    <th>Adres</th>
+    <th>Opis</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @linkis.each do |linki| %>
+  <tr>
+    <td><%= linki.techniczne %></td>
+    <td><%= linki.adres %></td>
+    <td><%= linki.opis %></td>
+    <td><%= link_to 'Show', linki %></td>
+    <td><%= link_to 'Edit', edit_linki_path(linki) %></td>
+    <td><%= link_to 'Destroy', linki, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Linki', new_linki_path %>

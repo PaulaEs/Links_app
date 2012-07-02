@@ -1,4 +1,6 @@
 LinksApp::Application.routes.draw do
+  resources :linkis
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,2 @@
+module LinkisHelper
+end
