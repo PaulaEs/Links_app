@@ -1,4 +1,3 @@
-
 class LinksController < ApplicationController
   # GET /links
   # GET /links.json
